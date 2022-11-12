@@ -32,24 +32,39 @@ function Signup() {
             // contactar BE crear usuario
             await signupService(newUser)
 
-            // redireccionar a login
+            // redireccionar a login posibles errores de status
             navigate("/login")
             
         } catch (error) {
 
-        if(error.response.status === 400) {
+        if(error.response && error.response.status === 400 ) {
             setErrorMessage(error.response.data.errorMessage)
 
-        } else{
-        navigate("/error")
+
+        }else{
+          navigate("/error")
+  
+          }
+
+        } 
+          
 
         }
-            
-            
-        }
+
 
         
-    }
+        
+
+        
+        
+
+        
+            
+            
+        
+
+        
+    
   
     return (
         <div>
