@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Error from './pages/Error';
+import Profile from './pages/Profile';
+import Private from './components/Private';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
        <Route path='/' element={ <Home />}/>
        <Route path="/signup" element={<Singnup />}/>
        <Route path="/login" element={ <Login />}/>
+       
+       
+       
+      {/*Rutas privadas */}
+       
+       <Route path="/profile" element={ <Private><Profile /> </Private>}/>
 
 
        {/* Posibles errores*/}

@@ -4,8 +4,8 @@ const signupService = (newUser) =>{
     return service.post("/auth/signup", newUser)
 }
 
-const loginService = (userCredentials) =>{
-    return service.post("auth/login", userCredentials)
+const loginService = (credentialsUser) =>{
+    return service.post("auth/login", credentialsUser)
 }
 
 const verifyService = () =>{

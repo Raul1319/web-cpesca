@@ -39,11 +39,16 @@ function Login() {
        // Recibir el token
 
        // local storage para almacenar info.
-       localStorage.setItem("token", response.data.authToken)
+       localStorage.setItem("authToken", response.data.authToken)
 
 
        //Valida el token del user
        authenticateUser()
+
+        // Redirecciona al user a profile
+
+        navigate("/profile")
+
 
 
        //Guardar info del que el usuario esta logado
