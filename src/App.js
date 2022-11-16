@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Error from './pages/Error';
 import Profile from './pages/Profile';
 import Private from './components/Private';
+import ProfileEdit from './pages/ProfileEdit';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
        
        
       {/*Rutas privadas */}
-       
+
+       <Route path="/editProfileId" element={<Private> <ProfileEdit /> </Private>}/>
        <Route path="/profile" element={ <Private><Profile /> </Private>}/>
 
 

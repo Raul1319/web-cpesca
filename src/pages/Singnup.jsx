@@ -50,23 +50,8 @@ function Signup() {
           
 
         }
-
-
-        
-        
-
-        
-        
-
-        
-            
-            
-        
-
-        
-    
-  
-    return (
+      
+      return (
         <div>
     
           <h1>Sign Up</h1>

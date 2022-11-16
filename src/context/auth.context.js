@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react"
 import { verifyService } from "../services/auth.services";
+import CircleLoader from "react-spinners/CircleLoader";
 
 const AuthContext = createContext()
 
@@ -54,7 +55,7 @@ function AuthWrapper (props) {
     return(
         <div className="App">
 
-            <h2>...Buscando Usuario</h2>
+            <CircleLoader/>
 
 
 
