@@ -1,8 +1,7 @@
 import React from 'react'
-import { useState, createContext, useEffect } from "react"
-import { profileService, deleteProfileService } from "../services/profile.services";
-import { useNavigate, useParams, Link } from "react-router-dom"
-import { verifyService } from "../services/auth.services";
+import { useState, useEffect } from "react"
+import { profileService, deleteProfileService, editPorfileSevice } from "../services/profile.services";
+import { useNavigate, useParams, NavLink } from "react-router-dom"
 import CircleLoader from "react-spinners/CircleLoader";
 
 
@@ -11,12 +10,11 @@ function Profile() {
   const navigate = useNavigate()
  
 
-  const {idUser} = useParams()
+  const { userId } = useParams()
 
   const [details, setDetails] = useState(null)
   const [isFetching, setIsFetching] = useState(true)
   const [errorMessage, setErrorMessage] = useState("");
-  
 
   useEffect(() =>{
 
@@ -45,25 +43,23 @@ function Profile() {
 
   if(isFetching === true) {
     return <CircleLoader/>
-  }
-
-  const handleDelete = async () =>{
     
-
-    try {
-
-      await deleteProfileService(idUser)
-      
-    } catch (error) {
-      navigate("/error")
-      
-    }
   }
+
+  
   return (
     <div>
         
         
-        <h3>Bienvenido a tu Perfil</h3>
+        <h2>Hola {details.username}</h2>
+        <br />
+        <p>Email: {details.email}</p>
+        
+        
+
+
+        <NavLink to={"/profile/edit"}><button>Editar</button></NavLink>
+  
 
 
 
