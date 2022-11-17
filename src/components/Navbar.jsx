@@ -1,6 +1,7 @@
-import { useContext } from "react"
-import { NavLink } from 'react-router-dom'
-import { AuthContext } from "../context/auth.context"
+import { useContext } from "react";
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from "../context/auth.context";
+import Button from 'react-bootstrap/Button';
 
 function Navbar() {
 
@@ -33,13 +34,13 @@ function Navbar() {
     ) : (
       <div>
         <NavLink to="/">
-        <button>Home</button>
+        <Button variant="warning">Home</Button>{' '}
         </NavLink>
         <NavLink to="/signup">
-        <button>Signup</button>
+        <Button variant="primary">Signup</Button>{' '}
         </NavLink>
         <NavLink to="/login">
-        <button>Login</button>
+        <Button variant="danger">Login</Button>{' '}
         </NavLink>
       
 

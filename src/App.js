@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
@@ -10,10 +10,14 @@ import Error from './pages/Error';
 import Profile from './pages/Profile';
 import Private from './components/Private';
 import ProfileEdit from './pages/ProfileEdit';
+import Products from './pages/Products';
+
 
 function App() {
   return (
     <div className="App">
+
+      
 
       <Navbar />
 
@@ -22,12 +26,13 @@ function App() {
        <Route path='/' element={ <Home />}/>
        <Route path="/signup" element={<Singnup />}/>
        <Route path="/login" element={ <Login />}/>
+       <Route path="/:profileId/edit" element={ <ProfileEdit />}/>
+       <Route path="/products" element={<Products />}/>
        
        
        
       {/*Rutas privadas */}
 
-       <Route path="/editProfileId" element={<Private> <ProfileEdit /> </Private>}/>
        <Route path="/profile" element={ <Private><Profile /> </Private>}/>
 
 

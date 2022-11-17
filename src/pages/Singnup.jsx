@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { signupService } from "../services/auth.services";
 import { useNavigate } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
 
 function Signup() {
      //configuracón del navigate
@@ -82,7 +83,7 @@ function Signup() {
               onChange={handlePasswordChange}
             />
     
-            <button type="submit">Signup</button>
+            <Button variant="success">Singnup</Button>{' '}
 
             {errorMessage !== "" ? <p>{errorMessage}</p> : null}
     

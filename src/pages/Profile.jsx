@@ -59,6 +59,7 @@ function Profile() {
 
 
         <NavLink to={"/profile/edit"}><button>Editar</button></NavLink>
+        <NavLink to={"/products"}><button>Productos</button></NavLink>
   
 
 

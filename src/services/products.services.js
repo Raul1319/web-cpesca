@@ -5,20 +5,20 @@ const productsService = (productsAll) =>{
 
 }
 
-const productsCreateSevice = (createProduct) =>{
-    return service.post("/products/create-products", createProduct)
+const productsCreateSevice = (create, createProduct) =>{
+    return service.post(`/products/${create}/products`, createProduct)
 }
 
-const categoryProductsSevice = (productList) =>{
-   return service.get("/products/:list", productList)
+const categoryProductsSevice = ( list, productList) =>{
+   return service.get(`/products/${list}`, productList)
 }
 
-const editProductService = (editProduct) =>{
-    return service.patch("/products/:edit", editProduct)
+const editProductService = (edit ,editProduct) =>{
+    return service.patch(`/products/${edit}`, editProduct)
 }
 
-const deleteProductService = (deleteProduct) =>{
-    return service.delete("/products/:deleteProductsId", deleteProduct)
+const deleteProductService = ( deleteProductsId, deleteProduct) =>{
+    return service.delete(`/products/${deleteProductsId}`, deleteProduct)
 }
 
 export{

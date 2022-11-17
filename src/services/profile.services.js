@@ -1,4 +1,3 @@
-import { Router } from "react-router-dom";
 import service from "./config.services";
 
 const profileService = () =>{

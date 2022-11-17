@@ -4,12 +4,12 @@ import { editPorfileSevice, profileService, deleteProfileService } from "../serv
 import { useNavigate, useParams, Link } from "react-router-dom"
 import {AuthContext} from "../context/auth.context"
 import CircleLoader from "react-spinners/CircleLoader";
+import {verifyService} from "../services/auth.services"
 
 
 function ProfileEdit() {
 
   const navigate = useNavigate();
-  const {user} = useContext(AuthContext);
 
   const {userId} = useParams();
   const {profileId} = useParams();
@@ -77,7 +77,7 @@ function ProfileEdit() {
 
       await deleteProfileService(userId)
 
-      navigate("/singunp")
+      navigate("/singup")
       
       
     } catch (error) {
