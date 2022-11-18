@@ -9,8 +9,8 @@ const productsCreateSevice = (create, createProduct) =>{
     return service.post(`/products/${create}/products`, createProduct)
 }
 
-const categoryProductsSevice = ( list, productList) =>{
-   return service.get(`/products/${list}`, productList)
+const categoryProductsSevice = ( productId, productList) =>{
+   return service.get(`/products/${productId}/list`, productList)
 }
 
 const editProductService = (edit ,editProduct) =>{

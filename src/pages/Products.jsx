@@ -8,7 +8,7 @@ import CircleLoader from "react-spinners/CircleLoader";
 function Products() {
 
 
-    const [porductsList, SetProductsList] = useState([]);
+    const [productsList, SetProductsList] = useState([]);
     const [isFetching, setIsFetching] = useState(true);
 
     const {list} = useParams();
@@ -44,7 +44,13 @@ function Products() {
       <h3>Bienvenido a la lista de Productos</h3>
 
       {list.map((eachProduct) =>{
-        return 
+        return (
+
+          <Link to={`/products/productsId/list/${eachProduct.id}`} key={eachProduct.id}>
+
+            <Products productsList={false} product={eachProduct} />
+          </Link>
+        )
 
 
       })}

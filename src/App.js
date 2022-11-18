@@ -11,6 +11,8 @@ import Profile from './pages/Profile';
 import Private from './components/Private';
 import ProfileEdit from './pages/ProfileEdit';
 import Products from './pages/Products';
+import CommentCreate from "./pages/CommentCreate"
+import CommentEdit from "./pages/CommentEdit"
 
 
 function App() {
@@ -28,7 +30,8 @@ function App() {
        <Route path="/login" element={ <Login />}/>
        <Route path="/:profileId/edit" element={ <ProfileEdit />}/>
        <Route path="/products" element={<Products />}/>
-       
+       <Route path="/createComments/:id" element={<CommentCreate />} />
+       <Route path="/productId/comments" element={<CommentEdit />} />
        
        
       {/*Rutas privadas */}

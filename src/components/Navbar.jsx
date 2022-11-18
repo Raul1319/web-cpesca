@@ -17,14 +17,20 @@ function Navbar() {
   }
   return (
     <div id="navbar">
+
+      <h1>CPESCA</h1>
     
     {isLoggedIn === true ? (
       <div>
       <NavLink to="/">
-      <button>Home</button>
+      <Button variant="primary" size="lg" disabled>
+        Home
+      </Button>{' '}
       </NavLink>
       <NavLink to="profile">
-      <button>Profile</button>
+      <Button variant="primary" size="lg" disabled>
+        Profile
+      </Button>{' '}
       </NavLink>
       <button onClick={handleLogout}>Cerrar Sesión</button>
 

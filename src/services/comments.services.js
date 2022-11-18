@@ -4,16 +4,16 @@ const commentsProductsSevices = (commentsProducts) =>{
  return service.get("/comments/productIdComments", commentsProducts)
 }
 
-const createCommenstServices = (createComments) =>{
-  return service.post("/comments/createComments/:id", createComments)
+const createCommenstServices = (id, createComments) =>{
+  return service.post(`/comments/createComments/${id}`, createComments)
 }
 
-const editCommentsServices = (editComments) =>{
-    return service.patch("/comments/:productId/comments", editComments)
+const editCommentsServices = (productId,editComments) =>{
+    return service.patch(`/comments/${productId}/comments`, editComments)
 }
 
-const deleteCommentsServices = (deleteComment) =>{
-    return service.patch("/comments/deleteCommentId", deleteComment)
+const deleteCommentsServices = (deleteCommentId, comments) =>{
+    return service.patch(`/comments/${deleteCommentId}`, comments)
 }
 
 export{
