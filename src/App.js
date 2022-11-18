@@ -29,9 +29,9 @@ function App() {
        <Route path="/signup" element={<Singnup />}/>
        <Route path="/login" element={ <Login />}/>
        <Route path="/:profileId/edit" element={ <ProfileEdit />}/>
-       <Route path="/products" element={<Products />}/>
        <Route path="/createComments/:id" element={<CommentCreate />} />
        <Route path="/productId/comments" element={<CommentEdit />} />
+       <Route path="/:productsId/list" element={<Products />} />
        
        
       {/*Rutas privadas */}

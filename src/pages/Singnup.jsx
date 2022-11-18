@@ -4,6 +4,13 @@ import { useNavigate } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 
 function Signup() {
+      
+      <div className="fondo">
+
+      
+      </div>
+
+
      //configuracón del navigate
     const navigate = useNavigate()
 
@@ -83,7 +90,7 @@ function Signup() {
               onChange={handlePasswordChange}
             />
     
-            <Button variant="success">Singnup</Button>{' '}
+            <Button type="submit" variant="success">Singnup</Button>{' '}
 
             {errorMessage !== "" ? <p>{errorMessage}</p> : null}
     
